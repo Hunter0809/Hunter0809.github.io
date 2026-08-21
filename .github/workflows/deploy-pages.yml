@@ -29,13 +29,16 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.1"
-          bundler-cache: true
+      - name: Install Jekyll dependencies
+        working-directory: "个人主页中"
+        run: bundle install
       - name: Build Jekyll site
+        working-directory: "个人主页中"
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
       - name: Upload static site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: ./个人主页中/_site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
