@@ -21,6 +21,13 @@ experience:
     position: "Research Assistant"
     date: "Sep. 2024–Jan. 2026"
     detail: "Technical benchmarking, investigation-data analysis, and research reporting"
+awards:
+  - name: "National First Prize, China Robot and Artificial Intelligence Competition (中国机器人及人工智能大赛)"
+    date: "2026"
+  - name: "Global First Prize, Huawei Information and Communications Technology Competition, Ascend Artificial Intelligence Track (华为信息与通信技术大赛昇腾人工智能赛道)"
+    date: "2026"
+  - name: "National First Prize, National College Student Internet of Things Design Competition (全国大学生物联网设计竞赛)"
+    date: "2025"
 research_interests:
   - "Parameter-Efficient Fine-Tuning"
   - "Large Language Models"

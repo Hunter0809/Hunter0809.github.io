@@ -3,29 +3,4 @@ layout: default
 title: Homepage
 navbar_title: Home
 ---
-<div class="row">
-  <div class="col-lg-3 col-md-4">{% include profile_sidebar.html %}</div>
-  <div class="col-lg-9 col-md-8">
-    <div class="card border-0 shadow-sm bg-white mb-4"><div class="card-body p-4 p-md-5">
-      <h1 class="h3 font-weight-normal">{{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small></h1>
-      <div class="text-profile-bio mt-3">{{ site.data.profile.short_bio }}</div><hr>
-      <h2 class="h4 font-weight-normal">Education</h2>
-      {% for item in site.data.profile.education %}<p class="mb-2"><strong>{{ item.name }}</strong><br><span class="small">{{ item.position }} · {{ item.detail }} · {{ item.date }}</span></p>{% endfor %}
-    </div></div>
-    <div class="card border-0 shadow-sm bg-white mb-4"><div class="card-body p-4 p-md-5">
-      <h2 class="h4 font-weight-normal"><i class="fas fa-star"></i> Selected Research</h2>
-      {% assign research = site.research | sort: 'date' | reverse | where: 'selected', true %}{% for item in research limit:3 %}{% include entry_card.html item=item %}{% endfor %}
-      <p class="small mt-3 mb-0"><a href="{{ '/research/' | relative_url }}">[View all research]</a></p>
-    </div></div>
-    <div class="card border-0 shadow-sm bg-white mb-4"><div class="card-body p-4 p-md-5">
-      <h2 class="h4 font-weight-normal"><i class="fas fa-laptop-code"></i> Independent Projects</h2>
-      {% assign projects = site.projects | sort: 'date' | reverse %}{% for item in projects %}{% include entry_card.html item=item %}{% endfor %}
-      <p class="small mt-3 mb-0"><a href="{{ '/projects/' | relative_url }}">[View all projects]</a></p>
-    </div></div>
-    <div class="card border-0 shadow-sm bg-white mb-4"><div class="card-body p-4 p-md-5">
-      <h2 class="h4 font-weight-normal"><i class="fas fa-trophy"></i> Selected Honors</h2>
-      {% for item in site.data.awards.national limit:3 %}<p class="border-bottom pb-3"><strong>{{ item.name }}</strong> ({{ item.chinese }})<br><span class="small text-muted">{{ item.detail }} · {{ item.date }}</span></p>{% endfor %}
-      <p class="small mt-3 mb-0"><a href="{{ '/awards/' | relative_url }}">[View all awards]</a></p>
-    </div></div>
-  </div>
-</div>
+<div class="row"><div class="col-lg-3 col-md-4">{% include widgets/profile_card_mini.html %}</div><div class="col-lg-9 col-md-8">{% include widgets/profile_card_bio_only.html %}{% include widgets/experience_card.html %}{% assign research = site.research | sort: "date" | reverse | where: "selected", true %}{% include widgets/publication_card.html entries=research title='<i class="fas fa-star"></i> Selected Research' url='/research/' all_label='All research' limit=3 %}{% assign projects = site.projects | sort: "date" | reverse %}{% include widgets/publication_card.html entries=projects title='<i class="fas fa-laptop-code"></i> Independent Projects' url='/projects/' all_label='All projects' limit=2 %}</div></div>
