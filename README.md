@@ -1,14 +1,23 @@
 # Keran Qiao — Academic Homepage
 
-A zero-build static site suitable for GitHub Pages.
+A Jekyll academic homepage organized in the style of the [academic-homepage](https://github.com/luost26/academic-homepage) template.
 
-## Publish to GitHub Pages
+## Content structure
 
-1. Create a public GitHub repository named `keranqiao.github.io` (replace `keranqiao` with your actual GitHub username).
-2. Upload **the contents** of this folder to the repository root, including `index.html`, `style.css`, and `assets/`.
-3. In the repository, open **Settings → Pages**, select **Deploy from a branch**, then choose `main` and `/ (root)`.
-4. Your website will be available at `https://keranqiao.github.io/` after GitHub finishes deployment.
+- `_data/`: profile, navigation, and awards data.
+- `_layouts/` and `_includes/`: reusable page shell, navigation, profile sidebar, and research/project cards.
+- `_research/`: research and patent entries.
+- `_projects/`: independently created product and competition projects.
+- `assets/`: the public portrait and site styling.
 
-For a project repository such as `academic-homepage`, the URL is `https://keranqiao.github.io/academic-homepage/`.
+The repository name remains `Hunter0809.github.io`, so the published address remains `https://hunter0809.github.io/`.
 
-> Before publishing, replace the placeholder GitHub username in the examples above with your actual account name. The original resume PDF is intentionally not included in this public site because it contains private contact information.
+## Local preview
+
+Install Ruby and Bundler, run `bundle install`, then run:
+
+```text
+bundle exec jekyll serve
+```
+
+The GitHub Pages workflow builds the Jekyll site and deploys the generated `_site/` directory. The original résumé PDF is not included because it contains private contact information.

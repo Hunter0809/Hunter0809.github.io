@@ -1,0 +1,6 @@
+---
+layout: default
+title: Projects
+---
+<section class="page-header"><h1>Independent Projects</h1><p>End-to-end intelligent applications independently designed and implemented from product workflow to deployment.</p></section>
+<section class="panel">{% assign projects = site.projects | sort: 'date' | reverse %}{% for item in projects %}{% include entry_card.html item=item %}{% endfor %}</section>

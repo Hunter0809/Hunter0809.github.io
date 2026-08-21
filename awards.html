@@ -1,0 +1,8 @@
+---
+layout: default
+title: Awards
+---
+<section class="page-header"><h1>Honors & Awards</h1><p>Competition recognition, scholarships, and university honors.</p></section>
+<section class="panel"><h2>Global and National Recognition</h2><ul class="awards">{% for item in site.data.awards.national %}<li><span class="award-date">{{ item.date }}</span><span class="award-title">{{ item.name }}</span> ({{ item.chinese }})<span class="award-detail">{{ item.detail }}</span></li>{% endfor %}</ul></section>
+<section class="panel"><h2>Provincial Recognition</h2><ul class="awards">{% for item in site.data.awards.provincial %}<li><span class="award-date">{{ item.date }}</span><span class="award-title">{{ item.name }}</span> ({{ item.chinese }})<span class="award-detail">{{ item.detail }}</span></li>{% endfor %}</ul></section>
+<section class="panel"><h2>Scholarships · Shenzhen University · 2025–2026</h2><ul class="awards">{% for item in site.data.awards.scholarships %}<li><span class="award-title">{{ item }}</span></li>{% endfor %}</ul></section>

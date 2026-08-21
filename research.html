@@ -1,0 +1,6 @@
+---
+layout: default
+title: Research
+---
+<section class="page-header"><h1>Research</h1><p>Research on efficient and interpretable artificial intelligence, multimodal model compression, and spatial intelligence.</p></section>
+<section class="panel">{% assign research = site.research | sort: 'date' | reverse %}{% for item in research %}{% include entry_card.html item=item %}{% endfor %}</section>

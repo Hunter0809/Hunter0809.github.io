@@ -1,0 +1,23 @@
+title: Keran Qiao
+description: Undergraduate researcher and independent developer at Shenzhen University.
+url: "https://hunter0809.github.io"
+baseurl: ""
+markdown: kramdown
+
+collections:
+  research:
+    output: true
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: entry
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: entry

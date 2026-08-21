@@ -1,0 +1,6 @@
+<article class="entry-card">
+  <h3><a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a></h3>
+  {% if include.item.meta %}<p class="entry-meta">{{ include.item.meta }}</p>{% endif %}
+  <p>{{ include.item.summary }}</p>
+  {% if include.item.links %}<p class="entry-links">{% for link in include.item.links %}<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">[{{ link.label }}]</a>{% endfor %}</p>{% endif %}
+</article>
