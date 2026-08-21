@@ -4,4 +4,25 @@ title: Awards
 navbar_title: Awards
 permalink: /awards/
 ---
-<div class="row"><div class="col-12 col-lg-10"><h2 class="pt-4">Honors &amp; Awards</h2><div class="my-0 p-0 bg-white shadow-sm rounded-xl"><div class="p-3">{% for item in site.data.awards.national %}<p class="border-bottom border-gray pb-3"><strong>{{ item.name }}</strong> ({{ item.chinese }})<br><span class="small text-muted">{{ item.detail }} · {{ item.date }}</span></p>{% endfor %}{% for item in site.data.awards.provincial %}<p class="border-bottom border-gray pb-3"><strong>{{ item.name }}</strong> ({{ item.chinese }})<br><span class="small text-muted">{{ item.detail }} · {{ item.date }}</span></p>{% endfor %}{% for item in site.data.awards.scholarships %}<p class="border-bottom border-gray pb-3"><strong>{{ item }}</strong></p>{% endfor %}</div></div></div></div>
+{% assign competition_awards = site.data.awards.national | concat: site.data.awards.provincial %}
+{% assign all_awards = competition_awards | concat: site.data.awards.scholarships %}
+{% assign awards_by_year = all_awards | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+<div class="row">
+  <div class="col-12 col-lg-10">
+    {% for year in awards_by_year %}
+    <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
+    <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+      {% for item in year.items %}
+      <div class="row no-gutters {% unless forloop.last %}border-bottom{% endunless %} border-gray">
+        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3 d-none d-md-block"><div class="template-cover"><i class="fas fa-trophy"></i></div></div>
+        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+          <h5 class="mt-0 mb-1 font-weight-normal">{{ item.name }}{% if item.chinese %} ({{ item.chinese }}){% endif %}</h5>
+          {% if item.detail %}<p class="mt-0 mb-0 small text-muted">{{ item.detail }}</p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  <div class="col-2 d-none d-lg-block"><div class="nav nav-pills flex-column sticky-top" style="top:80px">{% for year in awards_by_year %}<a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>{% endfor %}</div></div>
+</div>
