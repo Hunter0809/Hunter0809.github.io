@@ -4,8 +4,7 @@ title: Awards
 navbar_title: Awards
 permalink: /awards/
 ---
-{% assign competition_awards = site.data.awards.national | concat: site.data.awards.provincial %}
-{% assign all_awards = competition_awards | concat: site.data.awards.scholarships %}
+{% assign all_awards = site.data.awards.national | concat: site.data.awards.provincial %}
 {% assign awards_by_year = all_awards | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
 <div class="row">
   <div class="col-12 col-lg-10">
