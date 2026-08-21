@@ -1,8 +1,15 @@
 ---
 layout: default
 title: Awards
+navbar_title: Awards
 ---
-<section class="page-header"><h1>Honors & Awards</h1><p>Competition recognition, scholarships, and university honors.</p></section>
-<section class="panel"><h2>Global and National Recognition</h2><ul class="awards">{% for item in site.data.awards.national %}<li><span class="award-date">{{ item.date }}</span><span class="award-title">{{ item.name }}</span> ({{ item.chinese }})<span class="award-detail">{{ item.detail }}</span></li>{% endfor %}</ul></section>
-<section class="panel"><h2>Provincial Recognition</h2><ul class="awards">{% for item in site.data.awards.provincial %}<li><span class="award-date">{{ item.date }}</span><span class="award-title">{{ item.name }}</span> ({{ item.chinese }})<span class="award-detail">{{ item.detail }}</span></li>{% endfor %}</ul></section>
-<section class="panel"><h2>Scholarships · Shenzhen University · 2025–2026</h2><ul class="awards">{% for item in site.data.awards.scholarships %}<li><span class="award-title">{{ item }}</span></li>{% endfor %}</ul></section>
+<div class="card border-0 shadow-sm bg-white mb-4"><div class="card-body p-4 p-md-5">
+  <h1 class="h3 font-weight-normal">Honors &amp; Awards</h1>
+  <p class="text-muted">Competition recognition, scholarships, and university honors.</p>
+  <h2 class="h5 font-weight-normal mt-4">Global and National Recognition</h2>
+  {% for item in site.data.awards.national %}<p class="border-bottom pb-3"><strong>{{ item.name }}</strong> ({{ item.chinese }})<br><span class="small text-muted">{{ item.detail }} · {{ item.date }}</span></p>{% endfor %}
+  <h2 class="h5 font-weight-normal mt-4">Provincial Recognition</h2>
+  {% for item in site.data.awards.provincial %}<p class="border-bottom pb-3"><strong>{{ item.name }}</strong> ({{ item.chinese }})<br><span class="small text-muted">{{ item.detail }} · {{ item.date }}</span></p>{% endfor %}
+  <h2 class="h5 font-weight-normal mt-4">Scholarships · Shenzhen University · 2025–2026</h2>
+  {% for item in site.data.awards.scholarships %}<p class="border-bottom pb-3 mb-0"><strong>{{ item }}</strong></p>{% endfor %}
+</div></div>

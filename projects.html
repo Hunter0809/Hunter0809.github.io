@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Projects
+navbar_title: Projects
 ---
-<section class="page-header"><h1>Independent Projects</h1><p>End-to-end intelligent applications independently designed and implemented from product workflow to deployment.</p></section>
-<section class="panel">{% assign projects = site.projects | sort: 'date' | reverse %}{% for item in projects %}{% include entry_card.html item=item %}{% endfor %}</section>
+<div class="card border-0 shadow-sm bg-white mb-4"><div class="card-body p-4 p-md-5">
+  <h1 class="h3 font-weight-normal">Independent Projects</h1>
+  <p class="text-muted">End-to-end intelligent applications independently designed and implemented from product workflow to deployment.</p>
+  {% assign projects = site.projects | sort: 'date' | reverse %}{% for item in projects %}{% include entry_card.html item=item %}{% endfor %}
+</div></div>

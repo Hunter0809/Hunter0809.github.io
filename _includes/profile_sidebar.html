@@ -1,9 +1,11 @@
-<aside class="profile-card">
-  <img class="portrait" src="{{ site.data.profile.portrait_url | relative_url }}" alt="Portrait of {{ site.data.profile.primary_name }}">
-  <h1>{{ site.data.profile.primary_name }}{% if site.data.profile.secondary_name %}<span>{{ site.data.profile.secondary_name }}</span>{% endif %}</h1>
-  {% for position in site.data.profile.positions %}<p class="position">{{ position.name }}</p>{% endfor %}
-  <p class="contact"><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p>
-  <p class="social"><a href="https://github.com/{{ site.data.profile.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></p>
-  <h2>Research Interests</h2>
-  <ul>{% for item in site.data.profile.research_interests %}<li>{{ item }}</li>{% endfor %}</ul>
-</aside>
+<div class="card border-0 shadow-sm bg-white mb-4">
+  <div class="card-body p-4">
+    <img src="{{ site.data.profile.portrait_url | relative_url }}" class="img-fluid img-thumbnail mb-3" alt="Portrait of {{ site.data.profile.primary_name }}">
+    <h4 class="font-weight-normal mb-2">{{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small></h4>
+    <div class="text-profile-position mb-3">{% for position in site.data.profile.positions %}{{ position.name }}<br>{% endfor %}</div>
+    <div class="text-profile-bio small mb-3">{% for item in site.data.profile.research_interests %}<div>{{ item }}</div>{% endfor %}</div>
+    <hr>
+    <a class="pr-3 no-break" href="mailto:{{ site.data.profile.email }}"><i class="fas fa-at"></i> Email</a>
+    <a class="no-break" target="_blank" rel="noopener noreferrer" href="https://github.com/{{ site.data.profile.github }}"><i class="fab fa-github"></i> GitHub</a>
+  </div>
+</div>

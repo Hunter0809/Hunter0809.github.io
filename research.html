@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Research
+navbar_title: Research
 ---
-<section class="page-header"><h1>Research</h1><p>Research on efficient and interpretable artificial intelligence, multimodal model compression, and spatial intelligence.</p></section>
-<section class="panel">{% assign research = site.research | sort: 'date' | reverse %}{% for item in research %}{% include entry_card.html item=item %}{% endfor %}</section>
+<div class="card border-0 shadow-sm bg-white mb-4"><div class="card-body p-4 p-md-5">
+  <h1 class="h3 font-weight-normal">Research</h1>
+  <p class="text-muted">Research on efficient and interpretable artificial intelligence, multimodal model compression, and spatial intelligence.</p>
+  {% assign research = site.research | sort: 'date' | reverse %}{% for item in research %}{% include entry_card.html item=item %}{% endfor %}
+</div></div>
