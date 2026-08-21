@@ -1,6 +1,7 @@
 ---
 title: "DouYun (豆韵)"
 date: 2026-07-01
+cover: "/assets/images/projects/douyun-homepage.png"
 meta: "Independent creator and full-stack developer · National First Prize, China Robot and Artificial Intelligence Competition"
 summary: "A controllable artificial-intelligence workflow that turns traditional Chinese cultural themes and images into feasible fuse-bead patterns."
 links:

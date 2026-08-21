@@ -1,6 +1,7 @@
 ---
 title: "Qixue Learn (启学智伴)"
 date: 2026-06-01
+cover: "/assets/images/projects/qixue-learn-homepage.png"
 meta: "Independent creator and full-stack developer · National final round, China Software Cup · Award results pending"
 summary: "A multi-agent personalized-learning system that connects learner profiling, mistakes, planning, resources, and evaluation into a continuous loop."
 links:
