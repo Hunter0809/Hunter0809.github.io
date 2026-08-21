@@ -17,11 +17,11 @@ education:
     date: "2023–Present"
     detail: "Artificial Intelligence Elite Class"
 experience:
-  - name: "State Key Laboratory of Radio Frequency Heterogeneous Integration (射频异质异构集成全国重点实验室), Shenzhen University"
+  - name: "State Key Laboratory of Radio Frequency Heterogeneous Integration<br>射频异质异构集成全国重点实验室"
     position: "Research Assistant"
     date: "Sep. 2024–Jan. 2026"
     detail: "Technical benchmarking, investigation-data analysis, and research reporting"
-  - name: "Guangdong Provincial Engineering Research Center of Multimedia Information Service (广东省多媒体信息服务工程中心)"
+  - name: "Guangdong Provincial Engineering Research Center of Multimedia Information Service<br>广东省多媒体信息服务工程中心"
     position: "Research Assistant"
     date: "Sep. 2024–Aug. 2026"
     detail: "Independently led research on parameter-efficient fine-tuning and model compression for the post-training stage of large language models; systematically studied LoRA-variant architectures, quantization, and pruning strategies to substantially reduce parameter count and computational cost while preserving inference performance."

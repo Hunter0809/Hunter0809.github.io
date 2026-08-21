@@ -4,7 +4,7 @@ title: Scholarships
 navbar_title: Scholarships
 permalink: /scholarships/
 ---
-{% assign scholarships_by_year = site.data.awards.scholarships | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+{% assign scholarships_by_year = site.data.awards.scholarships | sort: "rank" | group_by_exp: "item", "item.date | date: '%Y'" %}
 <div class="row">
   <div class="col-12 col-lg-10">
     {% for year in scholarships_by_year %}
