@@ -1,5 +1,6 @@
 ---
-title: "DouYun (豆韵)"
+title: "DouYun"
+chinese_title: "豆韵"
 date: 2026-07-01
 cover: "/assets/images/projects/douyun-homepage.png"
 meta: "Independent creator and full-stack developer · National First Prize, China Robot and Artificial Intelligence Competition"
@@ -16,4 +17,6 @@ The workflow is organized as a controllable four-step pipeline: cultural-theme s
 
 I built the system with Next.js App Router, TypeScript, server-side artificial-intelligence routes, browser-side image processing, and reusable data modules for cultural themes, product templates, aspect ratios, and colour mappings. Lightweight user settings and artificial-intelligence configuration are stored locally, while IndexedDB preserves project history and a community interface supports publication, browsing, search, and importing works for further editing.
 
-DouYun received the **National First Prize, China Robot and Artificial Intelligence Competition** (中国机器人及人工智能大赛).
+DouYun received the **National First Prize, China Robot and Artificial Intelligence Competition**.
+
+中国机器人及人工智能大赛

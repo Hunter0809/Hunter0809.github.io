@@ -1,5 +1,6 @@
 ---
-title: "Qixue Learn (启学智伴)"
+title: "Qixue Learn"
+chinese_title: "启学智伴"
 date: 2026-06-01
 cover: "/assets/images/projects/qixue-learn-homepage.png"
 meta: "Independent creator and full-stack developer · National final round, China Software Cup · Award results pending"
@@ -16,4 +17,6 @@ The product connects intelligent question answering, photo-based problem search,
 
 I implemented the full-stack architecture with Next.js App Router, React, TypeScript, and server-side application programming interfaces. A multi-agent orchestration layer separates profile analysis, task understanding, resource generation, planning, and effectiveness evaluation; schema validation constrains generated structured data before it reaches the learning workflow. The system combines client state and data fetching with persistent learning records, supports local and PostgreSQL-compatible storage, and uses optical character recognition, mathematical formula rendering, data visualization, and automated route, interface, and interaction tests.
 
-Qixue Learn has advanced to the national final round of the China Software Cup (中国软件杯); award results are pending.
+Qixue Learn has advanced to the national final round of the China Software Cup; award results are pending.
+
+中国软件杯

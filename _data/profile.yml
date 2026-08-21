@@ -27,11 +27,14 @@ experience:
     date: "Sep. 2024–Aug. 2026"
     detail: "Independently led research on parameter-efficient fine-tuning and model compression for the post-training stage of large language models; systematically studied LoRA-variant architectures, quantization, and pruning strategies to substantially reduce parameter count and computational cost while preserving inference performance."
 awards:
-  - name: "National First Prize, China Robot and Artificial Intelligence Competition (中国机器人及人工智能大赛)"
+  - name: "National First Prize, China Robot and Artificial Intelligence Competition"
+    chinese: "中国机器人及人工智能大赛"
     date: "2026"
-  - name: "Global First Prize, Huawei Information and Communications Technology Competition, Ascend Artificial Intelligence Track (华为信息与通信技术大赛昇腾人工智能赛道)"
+  - name: "Global First Prize, Huawei Information and Communications Technology Competition, Ascend Artificial Intelligence Track"
+    chinese: "华为信息与通信技术大赛昇腾人工智能赛道"
     date: "2026"
-  - name: "National First Prize, National College Student Internet of Things Design Competition (全国大学生物联网设计竞赛)"
+  - name: "National First Prize, National College Student Internet of Things Design Competition"
+    chinese: "全国大学生物联网设计竞赛"
     date: "2025"
 research_interests:
   - "Parameter-Efficient Fine-Tuning"

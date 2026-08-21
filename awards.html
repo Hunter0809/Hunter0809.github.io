@@ -18,7 +18,7 @@ permalink: /awards/
           {% if item.certificate %}<a href="{{ item.certificate | relative_url }}" target="_blank" rel="noopener noreferrer"><img src="{{ item.certificate | relative_url }}" alt="Certificate for {{ item.name }}" class="award-certificate"></a>{% else %}<div class="template-cover"><i class="fas fa-trophy"></i></div>{% endif %}
         </div>
         <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-          <h5 class="mt-0 mb-1 font-weight-normal">{{ item.name }}{% if item.chinese %} ({{ item.chinese }}){% endif %}</h5>
+          <h5 class="mt-0 mb-1 font-weight-normal">{{ item.name }}</h5>{% if item.chinese %}<p class="mt-0 mb-1">{{ item.chinese }}</p>{% endif %}
           <p class="mt-0 mb-0 small"><em>{{ item.display_date }}</em></p>
           {% if item.detail %}<p class="mt-0 mb-0 small text-muted">{{ item.detail }}</p>{% endif %}
         </div>
